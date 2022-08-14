@@ -20,9 +20,10 @@
     <section id="services" class="services section-bg">
       <div class="container">
         <div class="row">
+          @foreach($statuses as $status)
           <div class="col-lg-3 col-md-6">
             <div class="icon-box">
-              <p class="description" id="status_1">" ਅਧੂਰਾ ਹੀ ਰਿਹਾ ਮੇਰੇ ਇਸ਼ਕੇ ਦਾ ਸਫਰ..ਕਦੇ ਰਸਤਾ ਖੋ ਗਿਆ , ਕਦੀ ਹਮਸਫਰ</p>
+              <p class="description" id="status_1">{{$status->status}}</p>
               <div class="d-flex">
                 <div class="col-md-6">
                   <div class="col-md-6 mx-1 col-md-1 cat-div copy-btn" data-copy-btn="1">
@@ -35,74 +36,10 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="icon-box">
-              <p class="description">"1 ਅਧੂਰਾ ਹੀ ਰਿਹਾ ਮੇਰੇ ਇਸ਼ਕੇ ਦਾ ਸਫਰ..ਕਦੇ ਰਸਤਾ ਖੋ ਗਿਆ , ਕਦੀ ਹਮਸਫਰ</p>
-              <div class="d-flex">
-                <div class="col-md-6 px-2">
-                  <i class="fa-solid fa-copy text-gray" style="cursor: pointer;"></i>
-                </div>
-                <div class="col-md-6 px-2" style="text-align: end;cursor: pointer;">
-                  <i class="fa-solid fa-thumbs-up text-gray" style="cursor: pointer;"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="icon-box">
-              <p class="description">" ਅਧੂਰਾ ਹੀ ਰਿਹਾ ਮੇਰੇ ਇਸ਼ਕੇ ਦਾ ਸਫਰ..ਕਦੇ ਰਸਤਾ ਖੋ ਗਿਆ , ਕਦੀ ਹਮਸਫਰ</p>
-              <div class="d-flex">
-                <div class="col-md-6 px-2">
-                  <i class="fa-solid fa-copy text-gray" style="cursor: pointer;"></i>
-                </div>
-                <div class="col-md-6 px-2" style="text-align: end;cursor: pointer;">
-                  <i class="fa-solid fa-thumbs-up text-gray" style="cursor: pointer;"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="icon-box">
-              <p class="description">" ਅਧੂਰਾ ਹੀ ਰਿਹਾ ਮੇਰੇ ਇਸ਼ਕੇ ਦਾ ਸਫਰ..ਕਦੇ ਰਸਤਾ ਖੋ ਗਿਆ , ਕਦੀ ਹਮਸਫਰ</p>
-              <div class="d-flex">
-                <div class="col-md-6 px-2">
-                  <i class="fa-solid fa-copy text-gray" style="cursor: pointer;"></i>
-                </div>
-                <div class="col-md-6 px-2" style="text-align: end;cursor: pointer;">
-                  <i class="fa-solid fa-thumbs-up text-gray" style="cursor: pointer;"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="icon-box">
-              <p class="description">" ਅਧੂਰਾ ਹੀ ਰਿਹਾ ਮੇਰੇ ਇਸ਼ਕੇ ਦਾ ਸਫਰ..ਕਦੇ ਰਸਤਾ ਖੋ ਗਿਆ , ਕਦੀ ਹਮਸਫਰ</p>
-              <div class="d-flex">
-                <div class="col-md-6 px-2">
-                  <i class="fa-solid fa-copy text-gray" style="cursor: pointer;"></i>
-                </div>
-                <div class="col-md-6 px-2" style="text-align: end;cursor: pointer;">
-                  <i class="fa-solid fa-thumbs-up text-gray" style="cursor: pointer;"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="icon-box">
-              <p class="description">" ਅਧੂਰਾ ਹੀ ਰਿਹਾ ਮੇਰੇ ਇਸ਼ਕੇ ਦਾ ਸਫਰ..ਕਦੇ ਰਸਤਾ ਖੋ ਗਿਆ , ਕਦੀ ਹਮਸਫਰ</p>
-              <div class="d-flex">
-                <div class="col-md-6 px-2">
-                  <i class="fa-solid fa-copy text-gray" style="cursor: pointer;"></i>
-                </div>
-                <div class="col-md-6 px-2" style="text-align: end;cursor: pointer;">
-                  <i class="fa-solid fa-thumbs-up text-gray" style="cursor: pointer;"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
   
 

@@ -15,10 +15,10 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'love',
-            'email' => 'love@work.ing',
-            'password' => Hash::make('123456')
+        Status::create([
+            'status' => '
+ਛੇਤੀ ਟੁੱਟਣ ਵਾਲੇ ਨਹੀ ਸੀ ਅਸੀ , ਬਸ ਕੋਈ ਆਪਣਾ ਬਣ ਕੇ ਤੋੜ ਗਿਆ',
+            'cat_id' => 5,
         ]);
     }
 }
