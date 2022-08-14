@@ -1553,12 +1553,14 @@ section {
   box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
   background: #FFD814;
   border: 1px solid #FCD200;
-  font-size: 11px;
+  font-size: 12px;
   height: 26px;
   padding: 4px 12px;
   text-align: center;
   font-weight: 500;
   color: #0F1111;
+  font-family: "Dosis", sans-serif;     
+
 }
 
 .copy-btn:hover{
@@ -1581,7 +1583,8 @@ section {
   padding: 4px 12px;
   text-align: center;
   font-weight: 500;
-  color: #0F1111;       
+  color: #0F1111;
+  font-family: "Dosis", sans-serif;     
 }
 
                     

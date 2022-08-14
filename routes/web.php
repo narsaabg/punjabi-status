@@ -15,5 +15,5 @@ Route::post('/login',[AuthController::class,'doLogin']);
 Route::get('/logout',[AuthController::class,'logout']);
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard',[DashboardController::class,'dashboard']);
+    Route::get('/admin/dashboard',[DashboardController::class,'dashboard']);
 });

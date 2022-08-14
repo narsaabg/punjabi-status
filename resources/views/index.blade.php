@@ -23,10 +23,10 @@
           @foreach($statuses as $status)
           <div class="col-lg-3 col-md-6">
             <div class="icon-box">
-              <p class="description" id="status_1">{{$status->status}}</p>
+              <p class="description" id="status_{{$status->id}}">{{$status->status}}</p>
               <div class="d-flex">
                 <div class="col-md-6">
-                  <div class="col-md-6 mx-1 col-md-1 cat-div copy-btn" data-copy-btn="1">
+                  <div class="col-md-6 mx-1 col-md-1 cat-div copy-btn" data-copy-btn="{{$status->id}}">
                     Copy
                   </div>
                 </div>

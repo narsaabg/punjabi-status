@@ -15,7 +15,7 @@ class StatusController extends Controller
 
     public function single_cat(Request $request , $slug){
         $cat_id = Category::where('slug',$slug)->pluck('id');
-        if($cat_id){
+        if(count($cat_id) > 0){
             $statuses = Status::where('cat_id',$cat_id)->get();
             return view('single-cat')->with('statuses',$statuses);
         }
