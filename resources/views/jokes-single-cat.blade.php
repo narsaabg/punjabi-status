@@ -5,9 +5,9 @@
   <section id="hero" class="d-flex align-items-center">
       <div class="container">
         <div class="row">
-            @foreach(get_categories() as $category)
+            @foreach(get_jokes_categories() as $category)
           <div class="col-lg-1 mx-1 col-md-1 cat-btn">
-            <a href="{{url('status')}}/{{$category->slug}}" style="color: #000">{{$category->name}}</a>
+            <a href="{{url('jokes')}}/{{$category->slug}}" style="color: #000">{{$category->name}}</a>
           </div>
           @endforeach
         </div>

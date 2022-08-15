@@ -5,9 +5,9 @@
   <section id="hero" class="d-flex align-items-center">
       <div class="container">
         <div class="row">
-            @foreach(get_categories() as $category)
+            @foreach(get_jokes_categories() as $category)
           <div class="col-lg-1 mx-1 col-md-1 cat-btn">
-            <a href="{{url('status')}}/{{$category->slug}}" style="color: #000">{{$category->name}}</a>
+            <a href="{{url('jokes')}}/{{$category->slug}}" style="color: #000">{{$category->name}}</a>
           </div>
           @endforeach
         </div>
@@ -23,10 +23,10 @@
           @foreach($statuses as $status)
           <div class="col-lg-3 col-md-6">
             <div class="icon-box">
-              <p class="description" id="status_1">{{$status->status}}</p>
+              <p class="description" id="status_{{$status->id}}">{{$status->status}}</p>
               <div class="d-flex">
                 <div class="col-md-6">
-                  <div class="col-md-6 mx-1 col-md-1 cat-div copy-btn" data-copy-btn="1">
+                  <div class="col-md-6 mx-1 col-md-1 copy-btn" data-copy-btn="{{$status->id}}">
                     Copy
                   </div>
                 </div>
@@ -41,23 +41,10 @@
       </div>
     </section>
 
-  
+
   </main>
 @endsection
 
 @section('scripts')
-    <script>
-        $(".copy-btn").click(function(){
-            $(this).html('Copied');
-            setTimeout(()=>{
-                $(this).html('Copy');
-            },2000);
-            var status_id = $(this).data('copy-btn');
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($("#status_"+status_id).text()).select();
-            document.execCommand("copy");
-            $temp.remove();
-        })
-    </script>
+    
 @endsection

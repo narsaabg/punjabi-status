@@ -21,4 +21,21 @@ class StatusController extends Controller
         }
         return redirect()->route('index');
     }
+
+    public function addStatus(Request $request){
+        $values = $request->only(['status','cat_id']);
+        session(['msg' => '']);
+        if($values['status'] !='' && $values['cat_id'] !=''){
+            $isStatusAdded = Status::create([
+                'status' => $values['status'],
+                'cat_id' => $values['cat_id']
+            ]);
+
+            if($isStatusAdded){
+                $msg = 'Status Added';
+                session(['msg' => 'Status Added']);
+            }
+        }
+        return redirect()->route('dashboard');
+    }
 }

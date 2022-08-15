@@ -6,7 +6,7 @@
 	<title>Login</title>
 </head>
 <body>
-	<form action="{{url('/login')}}" method="post">
+	<form action="{{url('/admin/login')}}" method="post">
 		@csrf
 		<input type="text" name="email">
 		<input type="password" name="password">
